@@ -9,6 +9,7 @@ use App\Http\Controllers\Cartcontroller;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use Illuminate\Http\Request;
 use App\Models\Category;
@@ -71,6 +72,11 @@ Route::post('/storecategory',[ CategoryController::class, 'StoreCategory'])->nam
 Route::get('/category/edit/{category}', [CategoryController::class, 'EditCategory'])->name('category.edit');
 Route::put('/category/update/{category}', [CategoryController::class, 'UpdateCategory'])->name('category.update');
 Route::delete('/category/{category}', [CategoryController::class, 'DestroyCategory'])->name('category.destroy');
+
+//settings
+Route::get('/settings', [SettingController::class, 'index'])->name('admin.settings.index');
+Route::post('/settings', [SettingController::class, 'update'])->name('admin.settings.update'); // Use POST for update as it includes file upload
+
 
 
 
