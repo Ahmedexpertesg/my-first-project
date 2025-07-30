@@ -10,6 +10,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use Illuminate\Http\Request;
 use App\Models\Category;
@@ -41,9 +42,9 @@ Route::middleware('auth')->group(function () {
 
 //Order
 Route::middleware('auth')->group(function () {
-    Route::get('/checkout', [CheckoutController::class, 'showCheckoutForm'])->name('checkout');
-    Route::post('/place-order', [CheckoutController::class, 'placeOrder'])->name('place.order');
-    Route::get('/checkout-success', [CheckoutController::class, 'success'])->name('checkout.success');
+Route::get('/checkout', [CheckoutController::class, 'showCheckoutForm'])->name('checkout');
+Route::post('/place-order', [CheckoutController::class, 'placeOrder'])->name('place.order');
+Route::get('/checkout-success', [CheckoutController::class, 'success'])->name('checkout.success');
 });
 
 
@@ -77,6 +78,13 @@ Route::delete('/category/{category}', [CategoryController::class, 'DestroyCatego
 Route::get('/settings', [SettingController::class, 'index'])->name('admin.settings.index');
 Route::post('/settings', [SettingController::class, 'update'])->name('admin.settings.update'); // Use POST for update as it includes file upload
 
+// Slider Routes
+Route::get('/sliders', [SliderController::class, 'index'])->name('admin.sliders.index');
+Route::get('/sliders/create', [SliderController::class, 'create'])->name('admin.sliders.create');
+Route::post('/sliders', [SliderController::class, 'store'])->name('admin.sliders.store');
+Route::get('/sliders/{slider}/edit', [SliderController::class, 'edit'])->name('admin.sliders.edit');
+Route::put('/sliders/{slider}', [SliderController::class, 'update'])->name('admin.sliders.update');
+Route::delete('/sliders/{slider}', [SliderController::class, 'destroy'])->name('admin.sliders.destroy');
 
 
 

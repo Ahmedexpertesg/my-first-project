@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Slider;
 
 
 class HomeController extends Controller
@@ -34,8 +35,9 @@ class HomeController extends Controller
     function MainPage () {
 
  $result= Category::all();
+  $sliders = Slider::all();
 
-    return view('welcome', ['categories' => $result]);
+    return view('welcome', ['categories' => $result , 'sliders' => $sliders]);
 }
 
 function GetCategoryProduct () {

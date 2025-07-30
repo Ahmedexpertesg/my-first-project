@@ -80,7 +80,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.category.index')}}">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-list"></i>
                     <span>Categories</span>
                 </a>
             </li>
@@ -92,17 +92,24 @@
                 </a>
             </li>
 
-           <!-- <li class="nav-item">
-                <a class="nav-link" href="">
+           <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.sliders.index')}}">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Home Slider</span>
                 </a>
-            </li>-->
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link" >
                     <i class="fas fa-fw fa-tags"></i>
                     <span>Attribute Manage</span>
+                </a>
+            </li>
+
+             <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.settings.index')}}" >
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Settings</span>
                 </a>
             </li>
 

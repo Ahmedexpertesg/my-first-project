@@ -14,48 +14,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-
-
-
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <meta charset="UTF-8">
 
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <meta name="description"
         content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
-
-
 
     <!-- title -->
 
     <title>e-commerce website</title>
 
-
-
     <!-- favicon -->
-
 
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 
     <!-- google font -->
 
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
     <!-- fontawesome -->
-
 
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
 
@@ -175,7 +160,8 @@
 
                             <a href="/">
 
-                                <img src="{{ asset($globalSettings['logo']->value ?? 'assets/img/default-logo.png') }}" alt="Logo">
+                                <img src="{{ asset($globalSettings['logo']->value ?? 'assets/img/default-logo.png') }}"
+                                    alt="Logo">
 
                             </a>
 
@@ -219,8 +205,7 @@
 
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-
-                                                    document.getElementById('logout-form').submit();">
+                                             document.getElementById('logout-form').submit();">
 
                                             {{ 'تسجيل الخروج ' }}
 
@@ -343,18 +328,7 @@
     <!-- end search area -->
 
 
-
-
-
-
-
     @yield('content')
-
-
-
-
-
-
 
 
 
